@@ -1,19 +1,16 @@
-import '../styles/globals.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Layout from '../components/Layout';
+import { Map, MapMarker } from "react-kakao-maps-sdk"
 
-import Script from "next/script"
-
-function MyApp({ Component, pageProps }) {
+export default function Home() {
   return (
-    <>
-      <Script
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=08d2f8ea91351e2cdff88adc5567ac0f&libraries=services,clusterer&autoload=false"
-        strategy="beforeInteractive"
-      />
-      <Component {...pageProps} />
-    </>
+    <Layout title="Home">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <Map
+          center={{ lat: 37.566, lng: 126.9786567 }}
+          level={120}
+          style={{ width: "100%", height: "360px" }} >
+        </Map>
+      </div>
+    </Layout>  
   )
 }
-
-export default MyApp

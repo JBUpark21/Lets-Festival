@@ -59,7 +59,7 @@ export default function Layout({ title, children }) {
             </div>
             <div className={Styles.slideimgbox}>
               <h3>
-                <img className={Styles.slideimg} src="images/003.png"></img>
+                <img className={Styles.slideimg} src="images/003.jpg"></img>
               </h3>
             </div>
             <div className={Styles.slideimgbox}>

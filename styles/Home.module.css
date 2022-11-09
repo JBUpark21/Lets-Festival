@@ -35,6 +35,17 @@
   text-align: center;
 }
 
+.fig {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  z-index: 2;
+  opacity: 0.70;
+  position: relative;
+  margin-top: 455px;
+  text-align: center;
+}
+
 /* 카카오지도 */
 
 .KakaomapP {
@@ -59,27 +70,9 @@
   box-sizing: border-box;
 }
 
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
-}
+/* 유튜브 박스 */
 
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.youtubecenter {
-  justify-content: center;
-  height: 200px;
-  display: flex;
-  margin-bottom: 100px;
-  position: relative;
-  z-index: 1;
-}
-
-.h1 {
+.Youtube_title {
   font-size: 32px;
   position: relative;
   margin-top: 100px;
@@ -91,13 +84,46 @@
   bottom: -20px;
 }
 
-.h2 {
+.Youtube_title_a {
   content: '';
   width: 350px;
   height: 3px;
-  background: linear-gradient(to right, #00b9ff, #e7224d);
+  background: linear-gradient(to right, gold, purple);
   position: relative;
   bottom: 50px;
   align-items: center;
   margin: auto;
+}
+
+.Youtube_center {
+  justify-content: center;
+  height: 300px;
+  display: flex;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.Youtube_box {
+  /* border: 1px solid blue; */
+  flex: 1;
+  width: 30%;
+  margin: 0px 2%;
+  box-sizing: border-box;
+}
+
+
+/* introduce 페이지  */
+
+.KakaomapB_intro {
+  display: flex;
+  margin: 1%;
+}
+
+.Kakaomap_intro {
+  /* border: 1px solid red; */
+  flex: 1;
+  /* box-sizing: border-box; */
+  margin: 2%;
+  border-radius: 8px;
 }

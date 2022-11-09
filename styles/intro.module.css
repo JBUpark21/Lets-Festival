@@ -1,0 +1,134 @@
+.main {
+  width: 100%;
+  height: 1000px;
+}
+
+.left {
+  width: 50%;
+  height: 99%;
+  float: left;
+  /* border: 1px solid; */
+}
+
+.right {
+  width: 50%;
+  height: 99%;
+  float: right;
+  /* border: 1px solid; */
+}
+
+.intro_a {
+  width: 90%;
+  height: 25%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+}
+
+.a_title {
+  width: 95%;
+  height: 30%;
+  margin: 2%;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: beige;
+  border-radius: 8px;
+   /* border: 1px solid; */
+}
+
+.a_write {
+  width: 95%;
+  height: 60%;
+  margin-top: 1%;
+  margin: 2%;
+  /* border: 1px solid; */
+  text-align: center;
+  max-height: 60%;
+  overflow: auto;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+.intro_b {
+  width: 90%;
+  height: 25%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+  display: flex;
+  margin: 10px auto;
+  background-color: lightpink;
+  border-radius: 8px;
+}
+
+.intro_c {
+  width: 90%;
+  height: 35%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+}
+
+.intro_c1 {
+  width: 30%;
+  height: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
+  float: left;
+  border: 1px solid;
+}
+
+.intro_c2 {
+  width: 55%;
+  height: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
+  /* border: 1px solid; */
+  float: left;
+  box-sizing: border-box;
+}
+
+/* 버튼 */
+
+.btn {
+  background: gray;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  display: block;
+  font-size: 0.3em;
+  font-weight: bold;
+  padding: 2em 4em;
+  margin: 10% auto;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #2ecc71;
+}
+
+/* 슬라이드 */
+
+.silde {
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.slideimgbox {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -2px;
+  object-fit: fill;
+  text-align: center;
+}

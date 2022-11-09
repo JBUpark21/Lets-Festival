@@ -59,3 +59,45 @@
   box-sizing: border-box;
 }
 
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.youtubecenter {
+  justify-content: center;
+  height: 200px;
+  display: flex;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.h1 {
+  font-size: 32px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-weight: bold;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  bottom: -20px;
+}
+
+.h2 {
+  content: '';
+  width: 350px;
+  height: 3px;
+  background: linear-gradient(to right, #00b9ff, #e7224d);
+  position: relative;
+  bottom: 50px;
+  align-items: center;
+  margin: auto;
+}

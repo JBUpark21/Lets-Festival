@@ -47,20 +47,19 @@
 }
 
 .Image {
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: auto;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.9;
-  z-index: 2;
 }
 
 .card_box {
   width: 100%;
   max-width: 1535px;
-  height: 2120px;
+  height: 1500px;
   border-radius: 10px;
   background: black;
   box-shadow: -10px 10px 40px rgba(12, 12, 12, 0.308);

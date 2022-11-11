@@ -1,8 +1,8 @@
-import React from "react";
-import Styles from "../styles/intro.module.css";
-import Layout from "../components/Layout";
-import Slider from "react-slick";
-import Kakao_intro from "../components/Kakao_intro";
+import React from 'react';
+import Styles from '../styles/intro.module.css';
+import Layout from '../components/Layout';
+import Slider from 'react-slick';
+import Kakao_intro from '../components/Kakao_intro';
 
 export default function ad() {
   const settings = {
@@ -70,7 +70,7 @@ export default function ad() {
             <div className={Styles.intro_c2}>
               <Kakao_intro></Kakao_intro>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </Layout>

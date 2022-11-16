@@ -1,7 +1,7 @@
-import Layout from '../components/Layout';
-import Styles from '../styles/Home.module.css';
-import Slider from 'react-slick';
-import Kakao from '../components/Kakao';
+import Layout from "../components/Layout";
+import Styles from "../styles/Home.module.css";
+import Slider from "react-slick";
+import Kakao from "../components/Kakao";
 
 export default function Home() {
   const settings = {

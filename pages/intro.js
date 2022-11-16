@@ -1,77 +1,41 @@
-import React from 'react';
-import Styles from '../styles/intro.module.css';
-import Layout from '../components/Layout';
-import Slider from 'react-slick';
-import Kakao_intro from '../components/Kakao_intro';
+import React from "react";
+import styles from "../styles/HomeIntro.module.css";
+import Layout from "../components/Layout";
 
-export default function ad() {
-  const settings = {
-    arrows: true,
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
+export default function Intro() {
   return (
-    <Layout title="Home">
-      <div className={Styles.main}>
-        <div className={Styles.left}>
-          <div className={Styles.silde}>
-            <Slider {...settings}>
-              <div className={Styles.slideimgbox}>
-                <h3>
-                  <img className={Styles.slideimg} src="images/001.jpg"></img>
-                </h3>
-              </div>
-              <div className={Styles.slideimgbox}>
-                <h3>
-                  <img className={Styles.slideimg} src="images/002.jpg"></img>
-                </h3>
-              </div>
-              <div className={Styles.slideimgbox}>
-                <h3>
-                  <img className={Styles.slideimg} src="images/003.png"></img>
-                </h3>
-              </div>
-              <div className={Styles.slideimgbox}>
-                <h3>
-                  <img className={Styles.slideimg} src="images/004.jpg"></img>
-                </h3>
-              </div>
-              <div className={Styles.slideimgbox}>
-                <h3>
-                  <img className={Styles.slideimg} src="images/005.jpg"></img>
-                </h3>
-              </div>
-              <div className={Styles.slideimgbox}>
-                <h3>
-                  <img className={Styles.slideimg} src="images/006.jpg"></img>
-                </h3>
-              </div>
-            </Slider>
-          </div>
-        </div>
-        <div className={Styles.right}>
-          <div className={Styles.intro_a}>
-            <div className={Styles.a_title}>축제 이름</div>
-            <div className={Styles.a_write}>축제 상세 내용</div>
-          </div>
-          <div className={Styles.intro_b}></div>
-          <div className={Styles.intro_c}>
-            <div className={Styles.intro_c1}>
-              <button className={Styles.btn}>행사장 안내도</button>
-              <button className={Styles.btn}>축제 찾아가는 길</button>
-              <button className={Styles.btn}>숙박시설/먹거리</button>
-              <button className={Styles.btn}>주변 추천관광지</button>
-            </div>
-            <div className={Styles.intro_c2}>
-              <Kakao_intro></Kakao_intro>
-            </div>
-          </div>
-        </div>
+    <Layout title="HomeIntro">
+      <div>
+        <img className={styles.Image} src="images/HomeIntro.png"></img>
+        <img className={styles.Image} src="images/HomeIntro2.png"></img>
+        <div className={styles.card_box}></div>
+        <h1 className={styles.MainFont}>홈페이지 소개</h1>
+        <h1 className={styles.MainFont2}>Let's Festival</h1>
+        <h2 className={styles.h2}></h2>
+        <h1 className={styles.MainFont3}>
+          하나의 사이트에서 한국에 존재하는 모든 지역축제를 알아보세요.
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          다양한 정보들을 하나의 사이트에서 손쉽게 얻어 축제들에 대한 관심도를
+          높일 수 있습니다.
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          그리고 축제 주변의 숙박시설과 음식시설을 다른 링크와 연계하여 여행
+          계획을 더 쉽게 짤 수 있습니다.
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          또한 비회원 로그인을 지원하여 별점과 리뷰 등을 자유롭게 남길 수
+          있습니다.
+        </h1>
       </div>
     </Layout>
   );

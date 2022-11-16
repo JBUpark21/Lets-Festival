@@ -1,5 +1,5 @@
-import { Map, MapMarker, ZoomControl } from 'react-kakao-maps-sdk';
-import Styles from '../styles/Home.module.css';
+import { Map, MapMarker, ZoomControl } from "react-kakao-maps-sdk";
+import Styles from "../styles/Home.module.css";
 
 export default function Kakao() {
   return (
@@ -9,12 +9,12 @@ export default function Kakao() {
           <Map
             center={{ lat: 36.55609600270734, lng: 127.8754074403906 }}
             level={13}
-            style={{ width: '100%', height: '250px' }}
+            style={{ width: "100%", height: "250px" }}
           >
             <MapMarker
               position={{ lat: 36.55609600270734, lng: 127.8754074403906 }}
             >
-              <div style={{ color: '#000' }}>축제장소</div>
+              <div style={{ color: "#000" }}>축제장소</div>
             </MapMarker>
             <ZoomControl Position="right"></ZoomControl>
           </Map>

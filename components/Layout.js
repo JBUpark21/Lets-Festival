@@ -73,7 +73,7 @@ export default function Layout({ title, children }) {
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="HomeIntro"
+                          href="intro"
                         >
                           {active ? (
                             <BeakerIcon
@@ -93,13 +93,13 @@ export default function Layout({ title, children }) {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           className={`${
                             active
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href=""
+                          href="developers"
                           onClick=""
                         >
                           {active ? (
@@ -114,7 +114,7 @@ export default function Layout({ title, children }) {
                             />
                           )}
                           개발자 소개
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
                   </div>
@@ -143,7 +143,7 @@ export default function Layout({ title, children }) {
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="intro"
+                          href="FestivalList"
                         >
                           {active ? (
                             <CalendarDaysIcon
@@ -213,7 +213,7 @@ export default function Layout({ title, children }) {
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="intro"
+                          href="Fintro"
                         >
                           {active ? (
                             <InformationCircleIcon
@@ -233,13 +233,13 @@ export default function Layout({ title, children }) {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           className={`${
                             active
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="#"
+                          href="posts"
                           onClick=""
                         >
                           {active ? (
@@ -254,19 +254,19 @@ export default function Layout({ title, children }) {
                             />
                           )}
                           자유 게시판
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
 
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           className={`${
                             active
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="#"
+                          href="contact"
                           onClick=""
                         >
                           {active ? (
@@ -281,7 +281,7 @@ export default function Layout({ title, children }) {
                             />
                           )}
                           문의 게시판
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
                   </div>

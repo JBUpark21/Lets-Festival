@@ -1,0 +1,137 @@
+.mainbox {
+  display: grid;
+  grid-template-rows: repeat(2, 360px);
+  grid-template-columns: repeat(8, 360px);
+  grid-auto-flow: column;
+  padding: 0px 4rem;
+}
+
+.buttonbox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  grid-column-end: span 2;
+  cursor: pointer;
+}
+
+.emptybox {
+  margin-left: 50%;
+}
+
+.profilebox1 {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(67, 164, 131);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 90;
+}
+
+.profilebox2 {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 90;
+}
+
+.profilebox3 {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(67, 164, 131);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 90;
+}
+
+.profilebox4 {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(67, 164, 131);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 90;
+}
+
+.profilebox5 {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(67, 164, 131);
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  z-index: 90;
+}
+
+.profileboxbox {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.text {
+  color: white;
+}
+
+.textheader {
+  text-align: right;
+  color: white;
+}
+
+.textbody {
+  font-size: 54px;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+  padding-top: 1rem;
+}
+
+.textfooter {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.CDbox1 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url('../public/images/cd2.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateX(60%) rotate(0deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  box-sizing: border-box;
+  border: 8px solid purple;
+}
+
+.CDbox1:hover {
+  content: '';
+  position: absolute;
+  width: 50% + 16px;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 12px;
+  transform: translateX(80%) rotate(720deg);
+  transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-delay: 0s;
+  transition-property: all;
+  border: 8px solid red;
+}

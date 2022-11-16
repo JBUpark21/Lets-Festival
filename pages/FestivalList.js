@@ -84,7 +84,7 @@ const FestivalList = () => {
         <table className="min-w-full table-auto text-gray-800">
           <thead className="justify-between">
             <tr className="bg-gray-800">
-              <th className="text-gray-300 px-4 py-3">순서</th>
+              <th className="text-gray-300 px-4 py-3">No</th>
               <th className="text-gray-300 px-4 py-3">축제 이름</th>
               <th className="text-gray-300 px-4 py-3">축제 내용</th>
               <th className="text-gray-300 px-4 py-3">축제 기간</th>

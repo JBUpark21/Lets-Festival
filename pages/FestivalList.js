@@ -3,6 +3,7 @@ import axios from 'axios';
 import Tr from './Tr';
 import Post from './Post';
 import Modal from './Modal';
+import Layout from '../components/Layout';
 
 const FestivalList = () => {
   const [info, setInfo] = useState([]);
@@ -56,7 +57,7 @@ const FestivalList = () => {
     const selectedData = {
       id: item.id,
       name: item.name,
-      eContent: item.Content,
+      Content: item.Content,
       period: item.period,
       website: item.website,
     };
@@ -75,33 +76,35 @@ const FestivalList = () => {
   };
 
   return (
-    <div className="container max-w-screen-lg mx-auto">
-      <div className="text-xl font-bold mt-5 mb-3 text-center">
-        축제 정보 리스트
+    <Layout>
+      <div className="container max-w-screen-lg mx-auto">
+        <div className="text-xl font-bold mt-5 mb-3 text-center">
+          축제 정보 리스트
+        </div>
+        <table className="min-w-full table-auto text-gray-800">
+          <thead className="justify-between">
+            <tr className="bg-gray-800">
+              <th className="text-gray-300 px-4 py-3">순서</th>
+              <th className="text-gray-300 px-4 py-3">축제 이름</th>
+              <th className="text-gray-300 px-4 py-3">축제 내용</th>
+              <th className="text-gray-300 px-4 py-3">축제 기간</th>
+              <th className="text-gray-300 px-4 py-3">축제 사이트</th>
+              <th className="text-gray-300 px-4 py-3">Edit</th>
+              <th className="text-gray-300 px-4 py-3">Delete</th>
+            </tr>
+          </thead>
+          <Tr info={info} handleRemove={handleRemove} handleEdit={handleEdit} />
+        </table>
+        <Post onSaveData={handleSave} />
+        {modalOn && (
+          <Modal
+            selectedData={selected}
+            handleCancel={handleCancel}
+            handleEditSubmit={handleEditSubmit}
+          />
+        )}
       </div>
-      <table className="min-w-full table-auto text-gray-800">
-        <thead className="justify-between">
-          <tr className="bg-gray-800">
-            <th className="text-gray-300 px-4 py-3">순서</th>
-            <th className="text-gray-300 px-4 py-3">축제 이름</th>
-            <th className="text-gray-300 px-4 py-3">축제 내용</th>
-            <th className="text-gray-300 px-4 py-3">축제 기간</th>
-            <th className="text-gray-300 px-4 py-3">축제 사이트</th>
-            <th className="text-gray-300 px-4 py-3">Edit</th>
-            <th className="text-gray-300 px-4 py-3">Delete</th>
-          </tr>
-        </thead>
-        <Tr info={info} handleRemove={handleRemove} handleEdit={handleEdit} />
-      </table>
-      <Post onSaveData={handleSave} />
-      {modalOn && (
-        <Modal
-          selectedData={selected}
-          handleCancel={handleCancel}
-          handleEditSubmit={handleEditSubmit}
-        />
-      )}
-    </div>
+    </Layout>
   );
 };
 export default FestivalList;

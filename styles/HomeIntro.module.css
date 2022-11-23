@@ -35,7 +35,7 @@
 }
 
 .h2 {
-  content: "";
+  content: '';
   width: 350px;
   height: 3px;
   background: linear-gradient(to right, #00b9ff, #e7224d);
@@ -59,14 +59,13 @@
 .card_box {
   width: 100%;
   max-width: 1535px;
-  height: 1500px;
-  border-radius: 10px;
+  height: 2047px;
   background: black;
   box-shadow: -10px 10px 40px rgba(12, 12, 12, 0.308);
   position: absolute;
   overflow: hidden;
   margin: auto;
-  top: 300px;
+  top: 65px;
   opacity: 0.6;
   z-index: 1;
 }

@@ -34,7 +34,7 @@
   text-align: center;
   background-color: beige;
   border-radius: 8px;
-   /* border: 1px solid; */
+  /* border: 1px solid; */
 }
 
 .a_write {
@@ -131,4 +131,131 @@
   top: -2px;
   object-fit: fill;
   text-align: center;
+}
+
+/* 사분할 */
+
+.intro_main_container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 2% auto;
+}
+
+.intro_main_a {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 5%;
+  background-color: salmon;
+  margin: 1%;
+}
+
+.intro_main_b {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  /* padding: 40%; */
+  background-color: yellow;
+  margin: 1%;
+
+  grid-template-rows: 1fr 2fr;
+}
+
+.intro_main_c {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: yellowgreen;
+  margin: 1%;
+}
+
+.intro_main_d {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  /* padding: 40%; */
+  background-color: lightblue;
+  margin: 1%;
+
+  align-items: center;
+  display: grid;
+}
+
+/* 설명 슬라이드 */
+
+.intro_main_silde {
+  width: 100%;
+  height: 100%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.intro_main_slideimgbox {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro_main_slideimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  text-align: center;
+}
+
+/* 축제 설명 */
+
+.intro_main_b_inner_container {
+  display: grid;
+
+  /* GapWidth를 5픽셀로 지정합니다. */
+  grid-gap: 5px;
+  grid-template-rows: 20% 1fr;
+}
+
+.intro_main_b_inner_a {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1%;
+  background: lightgreen;
+  padding: 1%;
+  text-align: center;
+  font-size: 40px;
+}
+
+.intro_main_b_inner_b {
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: yellow;
+  margin: 1%;
+  font-size: 15px;
+}
+
+.intro_main_b_inner_b > p {
+  background: lightgoldenrodyellow;
+  padding: 8px;
+  text-align: center;
+}
+
+.intro_main_d_inner_a {
+}
+
+/* contact */
+
+.background_image {
+  width: 100%;
+  height: 100%;
+  background-image: url(../public/images/mail.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  overflow: auto;
+  /* opacity: 0.80; */
 }

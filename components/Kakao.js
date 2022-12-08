@@ -1,4 +1,9 @@
-import { Map, MapMarker, ZoomControl } from "react-kakao-maps-sdk";
+import {
+  Map,
+  MapMarker,
+  ZoomControl,
+  MapTypeControl,
+} from "react-kakao-maps-sdk";
 import Styles from "../styles/Home.module.css";
 import SearchBox from "./SearchBox";
 
@@ -26,10 +31,10 @@ export default function Kakao() {
             >
               <div style={{ color: "#000" }}>Center</div>
             </MapMarker>
-            <ZoomControl Position="right"></ZoomControl>
+            <MapTypeControl></MapTypeControl>
+            <ZoomControl Position="left"></ZoomControl>
           </Map>
         </div>
-
         <SearchBox searchItems={searchItems} />
         {/* <SearchBox searchItems={["apple", "banana", "watermelon", "melon"]}/> */}
       </div>

@@ -73,7 +73,7 @@ export default function Layout({ title, children }) {
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="intro"
+                          href="Intro"
                         >
                           {active ? (
                             <BeakerIcon
@@ -143,7 +143,7 @@ export default function Layout({ title, children }) {
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="FestivalList"
+                          href="Fmain"
                         >
                           {active ? (
                             <CalendarDaysIcon
@@ -163,13 +163,13 @@ export default function Layout({ title, children }) {
 
                     <Menu.Item>
                       {({ active }) => (
-                        <button
+                        <a
                           className={`${
                             active
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href=""
+                          href="Fintro"
                           onClick=""
                         >
                           {active ? (
@@ -184,7 +184,7 @@ export default function Layout({ title, children }) {
                             />
                           )}
                           축제 참여 이벤트
-                        </button>
+                        </a>
                       )}
                     </Menu.Item>
                   </div>
@@ -239,7 +239,7 @@ export default function Layout({ title, children }) {
                               ? 'bg-violet-500 text-white'
                               : 'text-gray-900'
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="posts"
+                          href="Boardindex"
                           onClick=""
                         >
                           {active ? (
@@ -317,13 +317,13 @@ export default function Layout({ title, children }) {
                     <div className="px-1 py-1 ">
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <a
                             className={`${
                               active
                                 ? 'bg-violet-500 text-white'
                                 : 'text-gray-900'
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                            href="/"
+                            href="accountsetting"
                           >
                             {active ? (
                               <Cog6ToothIcon
@@ -337,7 +337,7 @@ export default function Layout({ title, children }) {
                               />
                             )}
                             설정
-                          </button>
+                          </a>
                         )}
                       </Menu.Item>
 
@@ -388,6 +388,7 @@ export default function Layout({ title, children }) {
 
       <main className="container m-auto mt-4">{children}</main>
 
+      <br />
       <br />
       <footer className="flex h-10 justify-center items-center shadow-inner bg-green-200">
         <p className={Styles.footer}>

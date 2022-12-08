@@ -35,7 +35,7 @@
 }
 
 .h2 {
-  content: '';
+  content: "";
   width: 350px;
   height: 3px;
   background: linear-gradient(to right, #00b9ff, #e7224d);

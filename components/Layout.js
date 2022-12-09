@@ -80,10 +80,11 @@ export default function Layout({ title, children }) {
                 </a>
               </Link>
 
-              <Link href="/contact">
-                <a class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4">
-                  개발자
-                </a>
+              <Link
+                href="/about"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                개발자
               </Link>
 
               <Link href="/crypto/jwt">

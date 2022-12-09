@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Profile from '../styles/developer.module.css';
 import { BsGithub } from 'react-icons/bs';
+import Link from 'next/link';
 
 export default function developers() {
   return (

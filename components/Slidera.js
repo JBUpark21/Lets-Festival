@@ -1,6 +1,5 @@
 import Styles from '../styles/App.module.css';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -68,7 +67,7 @@ function App() {
 
           const indexRighta = mod(index + 2, cards.length);
 
-          let className = 'cards';
+          let className = 'card';
 
           if (i === index) {
             className = Styles.card;
@@ -80,20 +79,21 @@ function App() {
             className = Styles.cardright;
           } else if (i === indexLefta) {
             className = Styles.cardrighta;
-          } else className = 'cards';
+          } else className = 'card';
 
           return (
+            // eslint-disable-next-line react/jsx-key
             <div className={Styles.imgbox}>
-              <Link href={item.url}>
+              <a href={item.url}>
                 <h3>
                   <img
-                    id={item.id}
+                    key={`${item.id}`}
                     className={className}
                     src={item.image}
                     alt="Comic"
                   ></img>
                 </h3>
-              </Link>
+              </a>
             </div>
           );
         })}

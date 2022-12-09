@@ -68,22 +68,22 @@ export default function Home() {
       <div className={Styles.Youtube_center}>
         <iframe
           src="https://www.youtube.com/embed/qrFnzqUsNXU"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           className={Styles.Youtube_box}
         ></iframe>
 
         <iframe
           src="https://www.youtube.com/embed/RKnB-x5iHpM"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           className={Styles.Youtube_box}
         ></iframe>
 
         <iframe
           src="https://www.youtube.com/embed/9fpaJvFKVQQ"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           className={Styles.Youtube_box}
         ></iframe>
       </div>

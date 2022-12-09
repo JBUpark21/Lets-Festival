@@ -48,9 +48,7 @@ export default function Layout({ title, children }) {
             </button>
 
             <Link href="/" className="flex">
-              <div>
-                <img src="/logo.png" className="h-16"></img>
-              </div>
+              <div img src="/logo.png" className="h-16"></div>
             </Link>
           </div>
 

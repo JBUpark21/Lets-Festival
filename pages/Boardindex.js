@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import { useState } from "react";
+import Link from "next/link";
+import Layout from "../components/Layout";
 
 export default function post(props) {
   const [post, setPost] = useState(props.data);
 
   const getAll = async () => {
-    const res = await fetch('http://localhost:5000/posts');
+    const res = await fetch("http://localhost:5000/posts");
     const data = await res.json();
 
     setPost(data);
   };
 
   const deletePost = async (id) => {
-    console.log('tes');
-    await fetch('http://localhost:5000/posts/' + id, {
-      method: 'DELETE',
+    console.log("tes");
+    await fetch("http://localhost:5000/posts/" + id, {
+      method: "DELETE",
     });
     getAll();
   };
@@ -53,10 +53,10 @@ export default function post(props) {
   return (
     <Layout>
       <div>
-        <div className="container mx-auto px-4 max-w-screen-sm">
+        <div className="container mx-auto px-4 max-w-screen-sm h-screen">
           <div>
             <Link href="/Boardcreate">
-              <div className="bg-red-600 text-center text-white px-4  py-2 my-4 inline-block">
+              <div className="bg-red-600 mt-20 text-center text-white px-4  py-2 my-4 inline-block">
                 게시물 올리기
               </div>
             </Link>
@@ -69,7 +69,7 @@ export default function post(props) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/posts');
+  const res = await fetch("http://localhost:5000/posts");
   const data = await res.json();
 
   if (!data) {

@@ -46,9 +46,9 @@ export default function FormPost(props) {
     if (action == 'add') {
       return (
         <a
-          className="rounded text-gray-100 px-3 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+          className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
           onClick={storeData}
-          href="Boardindex"
+          href="/Boardindex"
         >
           올리기
         </a>
@@ -59,19 +59,19 @@ export default function FormPost(props) {
           className="rounded text-gray-100 px-3 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
           onClick={updateData}
         >
-          Update
+          업데이트
         </a>
       );
     }
   };
 
   return (
-    <div className="my-10">
+    <div className="h-screen">
       <form>
-        <div class="my-8 border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div class="my-8 mt-40 absolute border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 rounded p-1">
           <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
             <p>
-              <label for="name" class="bg-white text-gray-600 px-1">
+              <label for="name" class="bg-white text-gray-600 px-1 ">
                 제목
               </label>
             </p>
@@ -83,12 +83,12 @@ export default function FormPost(props) {
               name="title"
               value={data.title}
               onChange={handleChange}
-              class="py-1 px-1 text-gray-900 outline-none block h-full w-full"
+              class="box-content w-96 py-1 px-1 text-gray-900 outline-none block h-full w-full"
             />
           </p>
         </div>
 
-        <div class="my-8 border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div class="my-8 border focus-within:border-blue-500 md:box-content focus-within:text-blue-500 transition-all duration-500 mt-60 absolute rounded p-1">
           <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
             <p>
               <label for="name" class="bg-white text-gray-600 px-1">
@@ -103,7 +103,7 @@ export default function FormPost(props) {
               name="author"
               value={data.author}
               onChange={handleChange}
-              class="py-1 px-1 text-gray-900 outline-none block h-full w-full"
+              class="box-content w-96 py-5 px-1 text-gray-900 outline-none block h-full w-full "
             />
           </p>
         </div>

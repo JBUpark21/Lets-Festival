@@ -1,25 +1,12 @@
 import Head from 'next/head';
-import Styles from '../styles/Layout.module.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { signOut, useSession } from 'next-auth/react';
 import { Menu } from '@headlessui/react';
 import Cookies from 'js-cookie';
-import {
-  BeakerIcon,
-  HomeIcon,
-  CakeIcon,
-  ChatBubbleLeftRightIcon,
-  IdentificationIcon,
-  CalendarDaysIcon,
-  StarIcon,
-  InformationCircleIcon,
-  ChatBubbleLeftEllipsisIcon,
-  PaperAirplaneIcon,
-  ArrowUturnRightIcon,
-  Cog6ToothIcon,
-} from '@heroicons/react/20/solid';
-
+import { ArrowUturnRightIcon, Cog6ToothIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
+import Image from 'next/image';
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
 
@@ -33,367 +20,197 @@ export default function Layout({ title, children }) {
       <Head>
         <title>{title ? title + " - Let's Festival" : "Let's Festival"}</title>
         <meta name="description" content="Nextjs" />
-        <link
-          rel="icon"
-          href="/festival_decoration_party_celebration_holiday_flag_carnival_icon_150775.ico"
-        />
+        <link rel="icon" href="/head.png" />
       </Head>
 
       <ToastContainer position="bottom-center" limit={1} />
 
-      <div className={Styles.bar}>
-        <header>
-          <nav className="flex flex-row h-12 items-center px-4 justify-between shadow-md">
-            <div className={Styles.gitimgbox}>
-              <img className={Styles.gitimg} src="images/logo.png"></img>
-            </div>
-            <a href="/" className="text-lg font-bold absolute pl-14">
-              Let's Festival
+      <header
+        aria-label="Site Header"
+        class="border-b border-gray-100 z-20 fixed bg-white w-full shadow-lg"
+      >
+        <div class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
+          <div class="flex items-center">
+            <button type="button" class="p-2 sm:mr-4 lg:hidden">
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+
+            <a href="/" class="flex">
+              <div>
+                <img src="/logo.png" class="h-16"></img>
+              </div>
             </a>
-            <div>
-              <Menu as="div" className="relative inline-block text-left p-2">
-                <Menu.Button>
-                  <HomeIcon
-                    className="mr-2 h-5 w-5 float-left"
-                    aria-hidden="true"
-                  />
-                  홈페이지 소개
-                </Menu.Button>
-                <Menu.Items
-                  className="absolute right-0 mt-2 w-56 origin-top-right divide-y
-                  divide-gray-100 rounded-md bg-white shadow-lg ring-1
-                  ring-black ring-opacity-5 focus:outline-none"
-                >
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="Intro"
-                        >
-                          {active ? (
-                            <BeakerIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <BeakerIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          개발 이유
-                        </a>
-                      )}
-                    </Menu.Item>
+          </div>
 
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="developers"
-                          onClick=""
-                        >
-                          {active ? (
-                            <IdentificationIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <IdentificationIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          개발자 소개
-                        </a>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Menu>
+          <div class="flex flex-1 items-center justify-end">
+            <nav
+              aria-label="Site Nav"
+              class="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500"
+            >
+              <a
+                href="/Fmain"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                축제 소개
+              </a>
 
-              <Menu as="div" className="relative inline-block text-left p-2">
-                <Menu.Button>
-                  <CakeIcon
-                    className="mr-2 h-5 w-5 float-left"
-                    aria-hidden="true"
-                  />
-                  축제 정보
-                </Menu.Button>
-                <Menu.Items
-                  className="absolute right-0 mt-2 w-56 origin-top-right divide-y
-                  divide-gray-100 rounded-md bg-white shadow-lg ring-1
-                  ring-black ring-opacity-5 focus:outline-none"
-                >
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="Fmain"
-                        >
-                          {active ? (
-                            <CalendarDaysIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <CalendarDaysIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          축제 일정/장소
-                        </a>
-                      )}
-                    </Menu.Item>
+              <a
+                href="/Boardindex"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                게시판
+              </a>
 
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="Fintro"
-                          onClick=""
-                        >
-                          {active ? (
-                            <StarIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <StarIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          축제 참여 이벤트
-                        </a>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Menu>
+              <a
+                href="/contact"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                문의하기
+              </a>
 
-              <Menu as="div" className="relative inline-block text-left p-2">
-                <Menu.Button>
-                  <ChatBubbleLeftRightIcon
-                    className="mr-2 h-5 w-5 float-left"
-                    aria-hidden="true"
-                  />
-                  커뮤니티
-                </Menu.Button>
-                <Menu.Items
-                  className="absolute right-0 mt-2 w-56 origin-top-right divide-y
-                  divide-gray-100 rounded-md bg-white shadow-lg ring-1
-                  ring-black ring-opacity-5 focus:outline-none"
-                >
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="Fintro"
-                        >
-                          {active ? (
-                            <InformationCircleIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <InformationCircleIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          공지사항
-                        </button>
-                      )}
-                    </Menu.Item>
+              <a
+                href="/about"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                개발자
+              </a>
+              <a
+                href="/crypto/jwt"
+                class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-orange-400 mx-4"
+              >
+                Jwt
+              </a>
+            </nav>
 
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="Boardindex"
-                          onClick=""
-                        >
-                          {active ? (
-                            <ChatBubbleLeftEllipsisIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <ChatBubbleLeftEllipsisIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          자유 게시판
-                        </a>
-                      )}
-                    </Menu.Item>
+            <div class="ml-8 flex items-center">
+              <div class="flex items-center divide-x divide-gray-100 border-x border-gray-100">
+                <span>
+                  {status === "loading" ? (
+                    <a
+                      className="p-2 inline-flex justify-center rounded-md
+            bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
+            text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
+            focus-visible:ring-white focus-visible:ring-opacity-75"
+                    >
+                      연결중..
+                    </a>
+                  ) : session?.user ? (
+                    <Menu as="div" className="relative inline-block text-left">
+                      <Menu.Button
+                        className="inline-flex w-full justify-center rounded-md
+            bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
+            text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
+            focus-visible:ring-white focus-visible:ring-opacity-75
+            "
+                      >
+                        {session.user.name}
+                      </Menu.Button>
 
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          className={`${
-                            active
-                              ? 'bg-violet-500 text-white'
-                              : 'text-gray-900'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          href="contact"
-                          onClick=""
-                        >
-                          {active ? (
-                            <PaperAirplaneIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <PaperAirplaneIcon
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          문의 게시판
-                        </a>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Menu>
-
-              {status === 'loading' ? (
-                <a
-                  className="p-2 inline-flex justify-center rounded-md
-                  bg-black bg-opacity-30 px-4 py-2 text-sm font-medium
-                  text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2
-                  focus-visible:ring-white focus-visible:ring-opacity-75 "
-                >
-                  연결중..
-                </a>
-              ) : session?.user ? (
-                <Menu as="div" className="relative inline-block text-left">
-                  <Menu.Button
-                    className="inline-flex w-full justify-center rounded-md
-                  bg-black bg-opacity-30 px-4 py-2 text-sm font-medium
-                  text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2
-                  focus-visible:ring-white focus-visible:ring-opacity-75
-                  "
-                  >
-                    {session.user.name}
-                  </Menu.Button>
-
-                  <Menu.Items
-                    className="absolute right-0 mt-2 w-56 origin-top-right divide-y
-                  divide-gray-100 rounded-md bg-white shadow-lg ring-1
-                  ring-black ring-opacity-5 focus:outline-none"
-                  >
-                    <div className="px-1 py-1 ">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            className={`${
-                              active
-                                ? 'bg-violet-500 text-white'
-                                : 'text-gray-900'
-                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                            href="accountsetting"
-                          >
-                            {active ? (
-                              <Cog6ToothIcon
-                                className="mr-2 h-5 w-5"
-                                aria-hidden="true"
-                              />
-                            ) : (
-                              <Cog6ToothIcon
-                                className="mr-2 h-5 w-5"
-                                aria-hidden="true"
-                              />
+                      <Menu.Items
+                        className="absolute right-0 mt-2 w-56 origin-top-right divide-y
+            divide-gray-100 rounded-md bg-white shadow-lg ring-1
+            ring-black ring-opacity-5 focus:outline-none"
+                      >
+                        <div className="px-1 py-1 ">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <Link
+                                className={`${
+                                  active
+                                    ? "bg-orange-400 text-white"
+                                    : "text-gray-900"
+                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                href="/accountsetting"
+                              >
+                                {active ? (
+                                  <Cog6ToothIcon
+                                    className="mr-2 h-5 w-5"
+                                    aria-hidden="true"
+                                  />
+                                ) : (
+                                  <Cog6ToothIcon
+                                    className="mr-2 h-5 w-5"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                                계정 설정
+                              </Link>
                             )}
-                            설정
-                          </a>
-                        )}
-                      </Menu.Item>
+                          </Menu.Item>
 
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button
-                            className={`${
-                              active
-                                ? 'bg-violet-500 text-white'
-                                : 'text-gray-900'
-                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                            href="logout"
-                            onClick={logoutClickHandler}
-                          >
-                            {active ? (
-                              <ArrowUturnRightIcon
-                                className="mr-2 h-5 w-5"
-                                aria-hidden="true"
-                              />
-                            ) : (
-                              <ArrowUturnRightIcon
-                                className="mr-2 h-5 w-5"
-                                aria-hidden="true"
-                              />
+                          <Menu.Item>
+                            {({ active }) => (
+                              <button
+                                className={`${
+                                  active
+                                    ? "bg-orange-400 text-white"
+                                    : "text-gray-900"
+                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                href="/logout"
+                                onClick={logoutClickHandler}
+                              >
+                                {active ? (
+                                  <ArrowUturnRightIcon
+                                    className="mr-2 h-5 w-5"
+                                    aria-hidden="true"
+                                  />
+                                ) : (
+                                  <ArrowUturnRightIcon
+                                    className="mr-2 h-5 w-5"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                                로그아웃
+                              </button>
                             )}
-                            로그아웃
-                          </button>
-                        )}
-                      </Menu.Item>
-                    </div>
-                  </Menu.Items>
-                </Menu>
-              ) : (
-                <a
-                  href="/signin"
-                  className="p-2 inline-flex justify-center rounded-md
-                  bg-black bg-opacity-30 px-4 py-2 text-sm font-medium
-                  text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2
-                  focus-visible:ring-white focus-visible:ring-opacity-75 "
-                >
-                  로그인
-                </a>
-              )}
+                          </Menu.Item>
+                        </div>
+                      </Menu.Items>
+                    </Menu>
+                  ) : (
+                    <a
+                      href="/signin"
+                      className="p-2 inline-flex justify-center rounded-md
+            bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
+            text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
+            focus-visible:ring-white focus-visible:ring-opacity-75"
+                    >
+                      로그인
+                    </a>
+                  )}
+                </span>
+              </div>
             </div>
-          </nav>
-        </header>
-      </div>
+          </div>
+        </div>
+      </header>
 
-      <main className="container m-auto mt-4">{children}</main>
+      <main className="">{children}</main>
 
-      <br />
-      <br />
-      <footer className="flex h-10 justify-center items-center shadow-inner bg-green-200">
-        <p className={Styles.footer}>
-          Copyright &copy; 2022 Powered by Team FallGuys
-        </p>
+      <footer className="bg-orange-100">
+        <div class="py-3 uk-link-reset">
+          <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
+            <div class="flex space-x-2 text-gray-700 uppercase">
+              <a href="/about">About</a>
+            </div>
+            <p class="capitalize">
+              Copyright &copy; 2022 Powered by Team FallGuys
+            </p>
+          </div>
+        </div>
       </footer>
     </>
   );

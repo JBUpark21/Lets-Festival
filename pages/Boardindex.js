@@ -1,15 +1,15 @@
-import { UseState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
-export default function post(props) {
-  const [Setpost, post] = UseState(props.data);
+export default function Post(props) {
+  const [post, setPost] = useState(props.data);
 
   const getAll = async () => {
     const res = await fetch('http://localhost:5000/posts');
     const data = await res.json();
 
-    Setpost(data);
+    setPost(data);
   };
 
   const deletePost = async (id) => {
@@ -51,7 +51,7 @@ export default function post(props) {
   };
 
   return (
-    <Layout>
+    <Layout title="Board">
       <div>
         <div className="container mx-auto px-4 max-w-screen-sm h-screen">
           <div>

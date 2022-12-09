@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 export default function Form() {
 
   return (
-    <Layout>
+    <Layout title="Contact">
       <main className="">
         <nav className="flex flex-row justify-between items-center p-8 bg-orange-50 dark:bg-blue-900">
           <div className="relative flex flex-row space-x-2 items-center"></div>

@@ -21,8 +21,8 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/MustHaveLove"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -48,8 +48,8 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/JBUkim"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -73,8 +73,8 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/withsjb/festivall"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -98,8 +98,8 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/JBUpark21"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />
@@ -123,8 +123,8 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/KooSinB"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={Profile.text}
                 >
                   <BsGithub />

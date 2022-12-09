@@ -2,6 +2,7 @@ import { Map, MapMarker, Roadview, MapTypeId } from 'react-kakao-maps-sdk';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import data from '../utils/data';
+import Layout from '../components/Layout';
 
 export default function Roadmap() {
   const { query } = useRouter();
@@ -15,7 +16,7 @@ export default function Roadmap() {
   });
 
   if (!festival) {
-    return <div title="Festival Not Found">Festival Not Found</div>;
+    return <Layout title="Festival Not Found">Festival Not Found</Layout>;
   }
 
   return (

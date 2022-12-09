@@ -49,20 +49,20 @@ export default function RegisterScreen() {
   };
   return (
     <Layout title="Create Account">
-      <section className="bg-white">
-        <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-          <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+      <section class="bg-white">
+        <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+          <section class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
             <img
               alt="Night"
               src="/images/dark-ga95c10069_1920.jpg"
-              className="absolute inset-0 h-full w-full object-cover opacity-80"
+              class="absolute inset-0 h-full w-full object-cover opacity-80"
             />
 
-            <div className="hidden lg:relative lg:block lg:p-12">
-              {/* <a className="block text-white" href="/">
-                <span className="sr-only">Home</span>
+            <div class="hidden lg:relative lg:block lg:p-12">
+              {/* <a class="block text-white" href="/">
+                <span class="sr-only">Home</span>
                 <svg
-                  className="h-8 sm:h-10"
+                  class="h-8 sm:h-10"
                   viewBox="0 0 28 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,11 +74,11 @@ export default function RegisterScreen() {
                 </svg>
               </a> */}
 
-              <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-                Let&apos;s Festival에 어서오세요!
+              <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+                Let&#39;s Festival에 어서오세요!
               </h2>
 
-              <p className="mt-4 leading-relaxed text-white/90">
+              <p class="mt-4 leading-relaxed text-white/90">
                 하나의 사이트에서 한국에 존재하는 모든 지역축제를 알아보세요.
                 <br />
                 다양한 정보들을 하나의 사이트에서 손쉽게 얻어 보세요.
@@ -88,18 +88,18 @@ export default function RegisterScreen() {
 
           <main
             aria-label="Main"
-            className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
+            class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
           >
-            <div className="max-w-xl lg:max-w-3xl">
+            <div class="max-w-xl lg:max-w-3xl">
               <form
                 action=""
-                className="mt-8 grid grid-cols-6 gap-6"
+                class="mt-8 grid grid-cols-6 gap-6"
                 onSubmit={handleSubmit(submitHandler)}
               >
-                <div className="col-span-6">
+                <div class="col-span-6">
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-gray-700"
                   >
                     이름
                   </label>
@@ -118,10 +118,10 @@ export default function RegisterScreen() {
                   )}
                 </div>
 
-                <div className="col-span-6">
+                <div class="col-span-6">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-gray-700"
                   >
                     이메일
                   </label>
@@ -135,7 +135,7 @@ export default function RegisterScreen() {
                         message: '이메일을 형식을 지켜주세요.',
                       },
                     })}
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     id="email"
                   />
                   {errors.email && (
@@ -143,10 +143,10 @@ export default function RegisterScreen() {
                   )}
                 </div>
 
-                <div className="col-span-6 sm:col-span-3">
+                <div class="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="password"
-                    className="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-gray-700"
                   >
                     비밀번호
                   </label>
@@ -159,7 +159,7 @@ export default function RegisterScreen() {
                         message: '비밀번호를 5글자 이상 입력하세요.',
                       },
                     })}
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     id="password"
                     autoFocus
                   />
@@ -170,16 +170,16 @@ export default function RegisterScreen() {
                   )}
                 </div>
 
-                <div className="col-span-6 sm:col-span-3">
+                <div class="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="confirmPassword"
-                    className="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-gray-700"
                   >
                     비밀번호 확인
                   </label>
 
                   <input
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     type="password"
                     id="confirmPassword"
                     {...register('confirmPassword', {
@@ -204,21 +204,21 @@ export default function RegisterScreen() {
                     )}
                 </div>
 
-                <div className="col-span-6 sm:flex sm:items-center sm:gap-4 flex justify-center">
+                <div class="col-span-6 sm:flex sm:items-center sm:gap-4 flex justify-center">
                   <button
-                    className="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
+                    class="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
                   hover:bg-transparent hover:text-orange-300 focus:outline-none focus:ring-orange-400 focus:ring-2 active:text-orange-500"
                   >
                     회원가입
                   </button>
                 </div>
 
-                <div className="col-span-6 flex justify-center">
-                  <p className="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
+                <div class="col-span-6 flex justify-center">
+                  <p class="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
                     이미 계정이 있으신가요? &nbsp;
                     <a
                       href={`/signin?redirect=${redirect || '/'}`}
-                      className="text-primary text-blue-300 hover:underline"
+                      class="text-primary text-blue-300 hover:underline"
                     >
                       로그인
                     </a>

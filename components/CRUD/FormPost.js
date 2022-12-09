@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import Link from 'next/link';
 
 export default function FormPost(props) {
   const router = useRouter();
@@ -46,12 +46,13 @@ export default function FormPost(props) {
   const handleButton = (action) => {
     if (action == 'add') {
       return (
-        <Link
-          className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
-          onClick={storeData}
-          href="/Boardindex"
-        >
-          올리기
+        <Link href="/Boardindex">
+          <a
+            className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+            onClick={storeData}
+          >
+            올리기
+          </a>
         </Link>
       );
     } else if (action == 'update') {
@@ -69,10 +70,10 @@ export default function FormPost(props) {
   return (
     <div className="h-screen">
       <form>
-        <div className="my-8 mt-40 absolute border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 rounded p-1">
-          <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+        <div class="my-8 mt-40 absolute border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 rounded p-1">
+          <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
             <p>
-              <label for="name" className="bg-white text-gray-600 px-1 ">
+              <label for="name" class="bg-white text-gray-600 px-1 ">
                 제목
               </label>
             </p>
@@ -84,15 +85,15 @@ export default function FormPost(props) {
               name="title"
               value={data.title}
               onChange={handleChange}
-              className="box-content w-96 py-1 px-1 text-gray-900 outline-none block h-full w-full"
+              class="box-content w-96 py-1 px-1 text-gray-900 outline-none block h-full w-full"
             />
           </p>
         </div>
 
-        <div className="my-8 border focus-within:border-blue-500 md:box-content focus-within:text-blue-500 transition-all duration-500 mt-60 absolute rounded p-1">
-          <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+        <div class="my-8 border focus-within:border-blue-500 md:box-content focus-within:text-blue-500 transition-all duration-500 mt-60 absolute rounded p-1">
+          <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
             <p>
-              <label for="name" className="bg-white text-gray-600 px-1">
+              <label for="name" class="bg-white text-gray-600 px-1">
                 내용
               </label>
             </p>
@@ -100,10 +101,11 @@ export default function FormPost(props) {
           <p>
             <input
               type="text"
+              className="form-control"
               name="author"
               value={data.author}
               onChange={handleChange}
-              className="form-control box-content w-96 py-5 px-1 text-gray-900 outline-none block h-full w-full"
+              class="box-content w-96 py-5 px-1 text-gray-900 outline-none block h-full w-full "
             />
           </p>
         </div>

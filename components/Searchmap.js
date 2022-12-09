@@ -1,35 +1,36 @@
 import React from 'react';
-import { UseRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import {
   Map,
   MapMarker,
   ZoomControl,
   MapTypeControl,
   CustomOverlayMap,
-} from 'react-kakao-Maps-sdk';
-import { UseState, useEffect } from 'react';
+} from 'react-kakao-maps-sdk';
+import { useState, useEffect } from 'react';
 import data from '../utils/data';
+import Layout from '../components/Layout';
 
-export default function SearchMap() {
-  const [SetInfo, Info] = UseState();
-  const [SetIsOpen, IsOpen] = UseState(false);
-  const [SetMarkers, Markers] = UseState([]);
-  const [SetMap, Map] = UseState();
+export default function Searchmap() {
+  const [info, setInfo] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const [markers, setMarkers] = useState([]);
+  const [map, setMap] = useState();
 
   useEffect(() => {
-    if (!Map) return;
-    const ps = new kakao.Maps.services.Places();
+    if (!map) return;
+    const ps = new kakao.maps.services.Places();
 
     ps.keywordSearch(festival.restaurant, (data, status, _pagination) => {
-      if (status === kakao.Maps.services.Status.OK) {
+      if (status === kakao.maps.services.Status.OK) {
         // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
         // LatLngBounds 객체에 좌표를 추가합니다
-        const bounds = new kakao.Maps.LatLngBounds();
-        let Markers = [];
+        const bounds = new kakao.maps.LatLngBounds();
+        let markers = [];
 
         for (var i = 0; i < data.length; i++) {
           // @ts-ignore
-          Markers.push({
+          markers.push({
             position: {
               lat: data[i].y,
               lng: data[i].x,
@@ -37,22 +38,22 @@ export default function SearchMap() {
             content: data[i].place_name,
           });
           // @ts-ignore
-          bounds.extend(new kakao.Maps.LatLng(data[i].y, data[i].x));
+          bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
         }
-        SetMarkers(Markers);
+        setMarkers(markers);
 
         // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-        Map.setBounds(bounds);
+        map.setBounds(bounds);
       }
     });
-  }, [Map]);
+  }, [map]);
 
-  const { Query } = UseRouter();
-  const { slug } = Query;
+  const { query } = useRouter();
+  const { slug } = query;
   const festival = data.festivals.find((x) => x.slug === slug);
 
   if (!festival) {
-    return <div title="Festival Not Found">Festival Not Found</div>;
+    return <Layout title="Festival Not Found">Festival Not Found</Layout>;
   }
 
   return (
@@ -67,27 +68,27 @@ export default function SearchMap() {
           height: '400px',
         }}
         level={2}
-        onCreate={SetMap}
+        onCreate={setMap}
       >
-        {Markers.Map((Marker) => (
+        {markers.map((marker) => (
           <MapMarker
-            key={`Marker-${Marker.content}-${Marker.position.lat},${Marker.position.lng}`}
-            position={Marker.position}
+            key={`marker-${marker.content}-${marker.position.lat},${marker.position.lng}`}
+            position={marker.position}
             clickable={true}
             onMouseOver={() => {
-              SetIsOpen(true), SetInfo(Marker);
+              setIsOpen(true), setInfo(marker);
             }}
             onMouseOut={() => {
-              SetIsOpen(false), SetInfo(Marker);
+              setIsOpen(false), setInfo(marker);
             }}
           >
-            {Info && Info.content === Marker.content && IsOpen && (
-              // <div style={{ color: "#000" }}>{Marker.content}</div>
+            {info && info.content === marker.content && isOpen && (
+              // <div style={{ color: "#000" }}>{marker.content}</div>
               <div
                 style={{ color: '#000' }}
                 className="box-content h-10 w-60  text-center text-lg items-center"
               >
-                {Marker.content}
+                {marker.content}
               </div>
             )}
           </MapMarker>

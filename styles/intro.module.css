@@ -256,6 +256,7 @@
   /* opacity: 0.80; */
 }
 
+
 .Map_title {
   font-size: 32px;
   position: relative;
@@ -271,7 +272,7 @@
   content: '';
   width: 350px;
   height: 4px;
-  background: linear-gradient(to right, #2563eb, #a21caf);
+  background: linear-gradient(to right, #2563eb,#a21caf);
   position: relative;
   bottom: 50px;
   align-items: center;

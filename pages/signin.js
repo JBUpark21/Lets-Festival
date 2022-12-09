@@ -302,7 +302,7 @@ export default function SigninScreen() {
                 type="button"
                 onClick={naverLoginHandler}
               >
-                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
+                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start text-green-500">
                   <svg
                     role="img"
                     fill="currentColor"
@@ -326,7 +326,7 @@ export default function SigninScreen() {
                 type="button"
                 onClick={kakaoLoginHandler}
               >
-                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
+                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start text-yellow-400">
                   <svg
                     role="img"
                     fill="currentColor"

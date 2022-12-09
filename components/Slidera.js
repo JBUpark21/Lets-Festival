@@ -86,7 +86,7 @@ function App() {
               <a href={item.url}>
                 <h3>
                   <img
-                    key={item.id}
+                    key=""
                     className={className}
                     src={item.image}
                     alt="Comic"

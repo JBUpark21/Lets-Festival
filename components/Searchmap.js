@@ -1,20 +1,20 @@
-import React from "react";
-import { useRouter } from "next/router";
+import React from 'react';
+import { useRouter } from 'next/router';
 import {
   Map,
   MapMarker,
   ZoomControl,
   MapTypeControl,
   CustomOverlayMap,
-} from "react-kakao-maps-sdk";
-import { useState, useEffect } from "react";
-import data from "../utils/data";
+} from 'react-kakao-maps-sdk';
+import { useState, useEffect } from 'react';
+import data from '../utils/data';
 
 export default function searchmap() {
-  const [info, setInfo] = useState();
-  const [isOpen, setIsOpen] = useState(false);
-  const [markers, setMarkers] = useState([]);
-  const [map, setMap] = useState();
+  const [SetInfo, info] = useState();
+  const [SetIsOpen, isOpen] = useState(false);
+  const [SetMarkers, markers] = useState([]);
+  const [SetMap, map] = useState();
 
   useEffect(() => {
     if (!map) return;
@@ -39,7 +39,7 @@ export default function searchmap() {
           // @ts-ignore
           bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
         }
-        setMarkers(markers);
+        SetMarkers(markers);
 
         // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
         map.setBounds(bounds);
@@ -52,7 +52,7 @@ export default function searchmap() {
   const festival = data.festivals.find((x) => x.slug === slug);
 
   if (!festival) {
-    return <Layout title="Festival Not Found">Festival Not Found</Layout>;
+    return <div title="Festival Not Found">Festival Not Found</div>;
   }
 
   return (
@@ -63,11 +63,11 @@ export default function searchmap() {
           lng: 126.9786567,
         }}
         style={{
-          width: "100%",
-          height: "400px",
+          width: '100%',
+          height: '400px',
         }}
         level={2}
-        onCreate={setMap}
+        onCreate={SetMap}
       >
         {markers.map((marker) => (
           <MapMarker
@@ -75,16 +75,16 @@ export default function searchmap() {
             position={marker.position}
             clickable={true}
             onMouseOver={() => {
-              setIsOpen(true), setInfo(marker);
+              SetIsOpen(true), SetInfo(marker);
             }}
             onMouseOut={() => {
-              setIsOpen(false), setInfo(marker);
+              SetIsOpen(false), SetInfo(marker);
             }}
           >
             {info && info.content === marker.content && isOpen && (
               // <div style={{ color: "#000" }}>{marker.content}</div>
               <div
-                style={{ color: "#000" }}
+                style={{ color: '#000' }}
                 className="box-content h-10 w-60  text-center text-lg items-center"
               >
                 {marker.content}

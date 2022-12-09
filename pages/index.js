@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import Styles from '../styles/Home.module.css';
-import Slider from 'react-slick';
+import Link from 'next/link';
 import { ArrowUpIcon } from '@heroicons/react/20/solid';
 import Slidera from '../components/Slidera';
 
@@ -24,7 +24,7 @@ export default function Home() {
         <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h1 class="text-3xl font-extrabold sm:text-5xl">
-              Let's
+              Let&apos;s
               <strong class="font-extrabold text-orange-500 sm:block">
                 Festival
               </strong>
@@ -38,19 +38,19 @@ export default function Home() {
             </p>
 
             <div class="mt-8 flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 class="block w-full rounded bg-orange-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-orange-500 focus:outline-none focus:ring active:bg-orange-500 sm:w-auto"
                 href="/signin"
               >
                 로그인
-              </a>
+              </Link>
 
-              <a
+              <Link
                 class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-orange-400 shadow hover:text-orange-600 focus:outline-none focus:ring active:text-orange-500 sm:w-auto"
                 href="/signup"
               >
                 회원가입
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -87,8 +87,6 @@ export default function Home() {
           className={Styles.Youtube_box}
         ></iframe>
       </div>
-
-      
 
       <a href="#" className={Styles.back_to_top}>
         <ArrowUpIcon></ArrowUpIcon>

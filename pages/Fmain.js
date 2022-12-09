@@ -1,12 +1,7 @@
-import React from "react";
-import Styles from "../styles/intro.module.css";
-import Layout from "../components/Layout";
-import Kakao_intro from "../components/Kakao_intro";
-import Season from "../components/season";
-import FestivalItem from "../components/FestivalItem";
-import data from "../utils/data";
-
-import { Tab } from "@headlessui/react";
+import React from 'react';
+import Layout from '../components/Layout';
+import FestivalItem from '../components/FestivalItem';
+import data from '../utils/data';
 
 export default function Fmain() {
   return (

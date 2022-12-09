@@ -8,11 +8,11 @@ function App() {
   const comic03 = 'images/고양가을꽃축제003.jpg';
   const comic04 = 'images/꽃박람회(1).jpg';
   const comic05 = 'images/제주들불축제(2).jpg';
-  const url01 = '/Fmain';
-  const url02 = '/Fmain';
-  const url03 = '/Fmain';
-  const url04 = '/Fmain';
-  const url05 = '/Fmain';
+  const url01 = '/festival/화천%20산천어%20축제';
+  const url02 = '/festival/부안%20설숭어%20축제';
+  const url03 = '/festival/고양가을꽃축제';
+  const url04 = '/festival/2022%20고양국제꽃박람회';
+  const url05 = '/festival/2022%20제주들불축제';
 
   const mod = (n, m) => {
     let result = n % m;
@@ -30,7 +30,7 @@ function App() {
     {
       id: '2',
       image: comic02,
-      url: url01,
+      url: url02,
     },
     {
       id: '3',

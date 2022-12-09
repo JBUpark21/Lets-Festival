@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { UseState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
 export default function post(props) {
-  const [Setpost, post] = useState(props.data);
+  const [Setpost, post] = UseState(props.data);
 
   const getAll = async () => {
     const res = await fetch('http://localhost:5000/posts');

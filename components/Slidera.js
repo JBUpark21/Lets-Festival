@@ -85,7 +85,12 @@ function App() {
             <div className={Styles.imgbox}>
               <a href={item.url}>
                 <h3>
-                  <img className={className} src={item.image} alt="Comic"></img>
+                  <img
+                    key={item.id}
+                    className={className}
+                    src={item.image}
+                    alt="Comic"
+                  ></img>
                 </h3>
               </a>
             </div>

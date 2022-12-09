@@ -5,7 +5,7 @@ export default function EditPost(props) {
     <div>
       <Header title="Create Post"></Header>
       <div className="container mx-auto px-4 max-w-screen-sm">
-        <FormPost action="update" dataPost={props.data}></FormPost>
+        <div action="update" dataPost={props.data}></div>
       </div>
     </div>
   );

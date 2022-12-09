@@ -1,6 +1,5 @@
 import Styles from '../styles/App.module.css';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -85,7 +84,8 @@ function App() {
           return (
             // eslint-disable-next-line react/jsx-key
             <div className={Styles.imgbox}>
-              <Link href={item.url}>
+              <a href={item.url}>
+                {' '}
                 <h3>
                   <img
                     key={`${item.id}`}
@@ -94,7 +94,7 @@ function App() {
                     alt="Comic"
                   ></img>
                 </h3>
-              </Link>
+              </a>
             </div>
           );
         })}

@@ -67,7 +67,7 @@ function App() {
 
           const indexRighta = mod(index + 2, cards.length);
 
-          let className = 'card';
+          let className = 'cards';
 
           if (i === index) {
             className = Styles.card;
@@ -79,7 +79,7 @@ function App() {
             className = Styles.cardright;
           } else if (i === indexLefta) {
             className = Styles.cardrighta;
-          } else className = 'card';
+          } else className = 'cards';
 
           return (
             <div className={Styles.imgbox}>

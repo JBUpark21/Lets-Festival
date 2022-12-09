@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import { UseRouter } from 'next/router';
 import {
   Map,
   MapMarker,
@@ -7,14 +7,14 @@ import {
   MapTypeControl,
   CustomOverlayMap,
 } from 'react-kakao-Maps-sdk';
-import { useState, useEffect } from 'react';
+import { UseState, useEffect } from 'react';
 import data from '../utils/data';
 
-export default function searchMap() {
-  const [SetInfo, Info] = useState();
-  const [SetIsOpen, IsOpen] = useState(false);
-  const [SetMarkers, Markers] = useState([]);
-  const [SetMap, Map] = useState();
+export default function SearchMap() {
+  const [SetInfo, Info] = UseState();
+  const [SetIsOpen, IsOpen] = UseState(false);
+  const [SetMarkers, Markers] = UseState([]);
+  const [SetMap, Map] = UseState();
 
   useEffect(() => {
     if (!Map) return;
@@ -47,8 +47,8 @@ export default function searchMap() {
     });
   }, [Map]);
 
-  const { query } = useRouter();
-  const { slug } = query;
+  const { Query } = UseRouter();
+  const { slug } = Query;
   const festival = data.festivals.find((x) => x.slug === slug);
 
   if (!festival) {
@@ -69,25 +69,25 @@ export default function searchMap() {
         level={2}
         onCreate={SetMap}
       >
-        {Markers.Map((marker) => (
+        {Markers.Map((Marker) => (
           <MapMarker
-            key={`marker-${marker.content}-${marker.position.lat},${marker.position.lng}`}
-            position={marker.position}
+            key={`Marker-${Marker.content}-${Marker.position.lat},${Marker.position.lng}`}
+            position={Marker.position}
             clickable={true}
             onMouseOver={() => {
-              SetIsOpen(true), SetInfo(marker);
+              SetIsOpen(true), SetInfo(Marker);
             }}
             onMouseOut={() => {
-              SetIsOpen(false), SetInfo(marker);
+              SetIsOpen(false), SetInfo(Marker);
             }}
           >
-            {info && info.content === marker.content && IsOpen && (
-              // <div style={{ color: "#000" }}>{marker.content}</div>
+            {Info && Info.content === Marker.content && IsOpen && (
+              // <div style={{ color: "#000" }}>{Marker.content}</div>
               <div
                 style={{ color: '#000' }}
                 className="box-content h-10 w-60  text-center text-lg items-center"
               >
-                {marker.content}
+                {Marker.content}
               </div>
             )}
           </MapMarker>

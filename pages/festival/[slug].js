@@ -40,28 +40,28 @@ export default function FestivalScreen() {
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
               <div className="absolute inset-0 h-full w-full object-cover">
-                <div classNameName={Styles.intro_main_slide}>
+                <div className={Styles.intro_main_slide}>
                   <Slider {...settings}>
-                    <div classNameName={Styles.intro_main_slideimgbox}>
+                    <div className={Styles.intro_main_slideimgbox}>
                       <h3>
                         <img
-                          classNameName={Styles.intro_main_slideimg}
+                          className={Styles.intro_main_slideimg}
                           src={festival.image1}
                         ></img>
                       </h3>
                     </div>
-                    <div classNameName={Styles.intro_main_slideimgbox}>
+                    <div className={Styles.intro_main_slideimgbox}>
                       <h3>
                         <img
-                          classNameName={Styles.intro_main_slideimg}
+                          className={Styles.intro_main_slideimg}
                           src={festival.image2}
                         ></img>
                       </h3>
                     </div>
-                    <div classNameName={Styles.intro_main_slideimgbox}>
+                    <div className={Styles.intro_main_slideimgbox}>
                       <h3>
                         <img
-                          classNameName={Styles.intro_main_slideimg}
+                          className={Styles.intro_main_slideimg}
                           src={festival.image3}
                         ></img>
                       </h3>
@@ -139,9 +139,9 @@ export default function FestivalScreen() {
       </section>
 
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 classNameName={Styles.Map_title}>{festival.location} 로드맵</h1>
-        <h2 classNameName={Styles.Map_title_a}></h2>
-        <div classNameName="border-4 border-orange-400 ring-2 ring-orange-400 rounded-lg">
+        <h1 className={Styles.Map_title}>{festival.location} 로드맵</h1>
+        <h2 className={Styles.Map_title_a}></h2>
+        <div className="border-4 border-orange-400 ring-2 ring-orange-400 rounded-lg">
           <Roadmap></Roadmap>
         </div>
       </div>

@@ -160,21 +160,21 @@ export default function AccountsettingScreen() {
         </div>
       </form> */}
 
-      <section class="bg-white">
-        <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-          <section class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+      <section className="bg-white">
+        <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
+          <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
             <img
               alt="Night"
               src="/images/butterfly-gbfa6ab678_1280.jpg"
-              class="absolute inset-0 h-full w-full object-cover opacity-80"
+              className="absolute inset-0 h-full w-full object-cover opacity-80"
             />
 
-            {/* <div class="hidden lg:relative lg:block lg:p-12">
-              <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+            {/* <div className="hidden lg:relative lg:block lg:p-12">
+              <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
                 계정정보 변경하기
               </h2>
 
-              <p class="mt-4 leading-relaxed text-white/90">
+              <p className="mt-4 leading-relaxed text-white/90">
                 이름과 비밀번호를 변경하기
               </p>
             </div> */}
@@ -182,18 +182,18 @@ export default function AccountsettingScreen() {
 
           <main
             aria-label="Main"
-            class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
+            className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
           >
-            <div class="max-w-xl lg:max-w-3xl">
+            <div className="max-w-xl lg:max-w-3xl">
               <form
                 action=""
-                class="mt-8 grid grid-cols-6 gap-6"
+                className="mt-8 grid grid-cols-6 gap-6"
                 onSubmit={handleSubmit(submitHandler)}
               >
-                <div class="col-span-6">
+                <div className="col-span-6">
                   <label
                     htmlFor="name"
-                    class="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700"
                   >
                     이름
                   </label>
@@ -212,10 +212,10 @@ export default function AccountsettingScreen() {
                   )}
                 </div>
 
-                <div class="col-span-6">
+                <div className="col-span-6">
                   <label
                     htmlFor="email"
-                    class="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700"
                   >
                     이메일
                   </label>
@@ -229,7 +229,7 @@ export default function AccountsettingScreen() {
                         message: '이메일을 형식을 지켜주세요.',
                       },
                     })}
-                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     id="email"
                   />
                   {errors.email && (
@@ -237,10 +237,10 @@ export default function AccountsettingScreen() {
                   )}
                 </div>
 
-                <div class="col-span-6 sm:col-span-3">
+                <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="password"
-                    class="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700"
                   >
                     비밀번호
                   </label>
@@ -253,7 +253,7 @@ export default function AccountsettingScreen() {
                         message: '비밀번호를 5글자 이상 입력하세요.',
                       },
                     })}
-                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     id="password"
                     autoFocus
                   />
@@ -264,15 +264,15 @@ export default function AccountsettingScreen() {
                   )}
                 </div>
 
-                <div class="col-span-6 sm:col-span-3">
+                <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="confirmPassword"
-                    class="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700"
                   >
                     비밀번호 확인
                   </label>
                   <input
-                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                     type="password"
                     id="confirmPassword"
                     {...register('confirmPassword', {
@@ -297,19 +297,19 @@ export default function AccountsettingScreen() {
                     )}
                 </div>
 
-                <div class="col-span-6 sm:col-span-3">
+                <div className="col-span-6 sm:col-span-3">
                   <button
-                    class="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
+                    className="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
                   hover:bg-transparent hover:text-orange-300 focus:outline-none focus:ring-orange-400 focus:ring-2 active:text-orange-500"
                   >
                     계정 정보 변경
                   </button>
                 </div>
 
-                <div class="col-span-6 sm:col-span-3">
+                <div className="col-span-6 sm:col-span-3">
                   <a
                     href={`/signin?redirect=${redirect || '/'}`}
-                    class="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
+                    className="inline-block shrink-0 rounded-md border border-orange-300 bg-orange-300 px-12 py-3 text-sm font-medium text-white transition 
                   hover:bg-transparent hover:text-orange-300 focus:outline-none focus:ring-orange-400 focus:ring-2 active:text-orange-500"
                   >
                     메인 돌아가기

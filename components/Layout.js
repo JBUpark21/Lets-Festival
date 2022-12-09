@@ -99,7 +99,7 @@ export default function Layout({ title, children }) {
                 <span>
                   {status === 'loading' ? (
                     <a
-                      classNameName="p-2 inline-flex justify-center rounded-md
+                      className="p-2 inline-flex justify-center rounded-md
             bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
             text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
             focus-visible:ring-white focus-visible:ring-opacity-75"
@@ -107,12 +107,9 @@ export default function Layout({ title, children }) {
                       연결중..
                     </a>
                   ) : session?.user ? (
-                    <Menu
-                      as="div"
-                      classNameName="relative inline-block text-left"
-                    >
+                    <Menu as="div" className="relative inline-block text-left">
                       <Menu.Button
-                        classNameName="inline-flex w-full justify-center rounded-md
+                        className="inline-flex w-full justify-center rounded-md
             bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
             text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
             focus-visible:ring-white focus-visible:ring-opacity-75
@@ -122,15 +119,15 @@ export default function Layout({ title, children }) {
                       </Menu.Button>
 
                       <Menu.Items
-                        classNameName="absolute right-0 mt-2 w-56 origin-top-right divide-y
+                        className="absolute right-0 mt-2 w-56 origin-top-right divide-y
             divide-gray-100 rounded-md bg-white shadow-lg ring-1
             ring-black ring-opacity-5 focus:outline-none"
                       >
-                        <div classNameName="px-1 py-1 ">
+                        <div className="px-1 py-1 ">
                           <Menu.Item>
                             {({ active }) => (
                               <Link
-                                classNameName={`${
+                                className={`${
                                   active
                                     ? 'bg-orange-400 text-white'
                                     : 'text-gray-900'
@@ -139,12 +136,12 @@ export default function Layout({ title, children }) {
                               >
                                 {active ? (
                                   <Cog6ToothIcon
-                                    classNameName="mr-2 h-5 w-5"
+                                    className="mr-2 h-5 w-5"
                                     aria-hidden="true"
                                   />
                                 ) : (
                                   <Cog6ToothIcon
-                                    classNameName="mr-2 h-5 w-5"
+                                    className="mr-2 h-5 w-5"
                                     aria-hidden="true"
                                   />
                                 )}
@@ -156,7 +153,7 @@ export default function Layout({ title, children }) {
                           <Menu.Item>
                             {({ active }) => (
                               <button
-                                classNameName={`${
+                                className={`${
                                   active
                                     ? 'bg-orange-400 text-white'
                                     : 'text-gray-900'
@@ -166,12 +163,12 @@ export default function Layout({ title, children }) {
                               >
                                 {active ? (
                                   <ArrowUturnRightIcon
-                                    classNameName="mr-2 h-5 w-5"
+                                    className="mr-2 h-5 w-5"
                                     aria-hidden="true"
                                   />
                                 ) : (
                                   <ArrowUturnRightIcon
-                                    classNameName="mr-2 h-5 w-5"
+                                    className="mr-2 h-5 w-5"
                                     aria-hidden="true"
                                   />
                                 )}
@@ -185,7 +182,7 @@ export default function Layout({ title, children }) {
                   ) : (
                     <Link
                       href="/signin"
-                      classNameName="p-2 inline-flex justify-center rounded-md
+                      className="p-2 inline-flex justify-center rounded-md
             bg-orange-400 bg-opacity-80 px-4 py-2 text-sm font-medium
             text-white hover:bg-opacity-100 focus:outline-none focus-visible:ring-2
             focus-visible:ring-white focus-visible:ring-opacity-75"
@@ -200,9 +197,9 @@ export default function Layout({ title, children }) {
         </div>
       </header>
 
-      <main classNameName="">{children}</main>
+      <main className="">{children}</main>
 
-      <footer classNameName="bg-orange-100">
+      <footer className="bg-orange-100">
         <div className="py-3 uk-link-reset">
           <div className="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
             <div className="flex space-x-2 text-gray-700 uppercase">

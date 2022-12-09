@@ -146,13 +146,13 @@ export default function SigninScreen() {
                       message: '이메일을 형식을 지켜주세요.',
                     },
                   })}
-                  classNameName="w-full rounded-lg border-slate-300 p-4 pr-12 text-sm shadow-sml"
+                  className="w-full rounded-lg border-slate-300 p-4 pr-12 text-sm shadow-sml"
                   id="email"
                   placeholder="이메일"
                   autoFocus
                 />
                 {errors.email && (
-                  <div classNameName="text-red-500">{errors.email.message}</div>
+                  <div className="text-red-500">{errors.email.message}</div>
                 )}
 
                 <span className="absolute inset-y-0 right-4 inline-flex items-center">
@@ -194,9 +194,7 @@ export default function SigninScreen() {
                   autoFocus
                 />
                 {errors.password && (
-                  <div classNameName="text-red-500 ">
-                    {errors.password.message}
-                  </div>
+                  <div className="text-red-500 ">{errors.password.message}</div>
                 )}
 
                 <span className="absolute inset-y-0 right-4 inline-flex items-center">
@@ -224,9 +222,9 @@ export default function SigninScreen() {
               </div>
             </div>
 
-            <div classNameName="mb-4 grid place-items-center">
+            <div className="mb-4 grid place-items-center">
               <button
-                classNameName="mb-2 py-3 px-6 text-sm font-medium text-orange-400 bg-white rounded border w-full
+                className="mb-2 py-3 px-6 text-sm font-medium text-orange-400 bg-white rounded border w-full
             border-orange-300 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-orange-400
             focus:text-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white 
             dark:hover:bg-gray-600 dark:focus:ring-orange-500 dark:focus:text-white"
@@ -234,27 +232,27 @@ export default function SigninScreen() {
                 로그인
               </button>
             </div>
-            <span classNameName="relative block font-light text-md leading-7 text-center text-gray-500">
-              <span classNameName="absolute block left-0 top-1/2 h-px w-32 bg-opacity-100 bg-slate-300"></span>
-              <span classNameName="absolute block right-0 top-1/2 h-px w-32 bg-opacity-100 bg-slate-300"></span>
+            <span className="relative block font-light text-md leading-7 text-center text-gray-500">
+              <span className="absolute block left-0 top-1/2 h-px w-32 bg-opacity-100 bg-slate-300"></span>
+              <span className="absolute block right-0 top-1/2 h-px w-32 bg-opacity-100 bg-slate-300"></span>
               소셜 로그인
             </span>
-            <div classNameName="mb-4 text-center">
+            <div className="mb-4 text-center">
               <button
-                classNameName="mt-2 mb-2 mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
+                className="mt-2 mb-2 mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
                 border-orange-300 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-orange-400
                 focus:text-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white 
                 dark:hover:bg-gray-600 dark:focus:ring-orange-500 dark:focus:text-white"
                 type="button"
                 onClick={githubLoginHandler}
               >
-                <span classNameName="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
+                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
                   <a href="https://github.com/JBUpark21">
                     <svg
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      classNameName="w-5 h-5"
+                      className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
                       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
@@ -263,16 +261,16 @@ export default function SigninScreen() {
                 </span>
               </button>
               <button
-                classNameName="mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
+                className="mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
                 border-orange-300 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-orange-400
                 focus:text-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white 
                 dark:hover:bg-gray-600 dark:focus:ring-orange-500 dark:focus:text-white"
                 type="button"
                 onClick={googleLoginHandler}
               >
-                <span classNameName="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
+                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
                   <a
-                    classNameName="text-gray-500"
+                    className="text-gray-500"
                     href="https://github.com/JBUpark21"
                   >
                     <svg
@@ -280,7 +278,7 @@ export default function SigninScreen() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      classNameName="w-5 h-5"
+                      className="w-5 h-5"
                       viewBox="0 0 24 20"
                     >
                       <path
@@ -304,16 +302,16 @@ export default function SigninScreen() {
                 </span>
               </button>
               <button
-                classNameName="mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
+                className="mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
                 border-orange-300 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-orange-400
                 focus:text-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white 
                 dark:hover:bg-gray-600 dark:focus:ring-orange-500 dark:focus:text-white"
                 type="button"
                 onClick={naverLoginHandler}
               >
-                <span classNameName="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
+                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
                   <a
-                    classNameName="text-green-500"
+                    className="text-green-500"
                     href="https://github.com/JBUpark21"
                   >
                     <svg
@@ -322,7 +320,7 @@ export default function SigninScreen() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      classNameName="w-5 h-5"
+                      className="w-5 h-5"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -333,16 +331,16 @@ export default function SigninScreen() {
                 </span>
               </button>
               <button
-                classNameName="mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
+                className="mx-3 py-3 text-sm font-medium text-orange-400 bg-white rounded border w-12 h-12
                 border-orange-300 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-orange-400
                 focus:text-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white 
                 dark:hover:bg-gray-600 dark:focus:ring-orange-500 dark:focus:text-white"
                 type="button"
                 onClick={kakaoLoginHandler}
               >
-                <span classNameName="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
+                <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
                   <a
-                    classNameName="text-yellow-400"
+                    className="text-yellow-400"
                     href="https://github.com/JBUpark21"
                   >
                     <svg
@@ -351,7 +349,7 @@ export default function SigninScreen() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      classNameName="w-5 h-5"
+                      className="w-5 h-5"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                     >

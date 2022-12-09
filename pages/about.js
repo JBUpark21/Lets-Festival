@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Profile from '../styles/developer.module.css'
-import { BsGithub } from 'react-icons/bs'
+import React from 'react';
+import Layout from '../components/Layout';
+import Profile from '../styles/developer.module.css';
+import { BsGithub } from 'react-icons/bs';
 
 export default function developers() {
   return (
@@ -21,6 +21,7 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/MustHaveLove"
+                  rel="noopener"
                   target="_blank"
                   className={Profile.text}
                 >
@@ -47,6 +48,7 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/JBUkim"
+                  rel="noopener"
                   target="_blank"
                   className={Profile.text}
                 >
@@ -71,6 +73,7 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/withsjb/festivall"
+                  rel="noopener"
                   target="_blank"
                   className={Profile.text}
                 >
@@ -95,6 +98,7 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/JBUpark21"
+                  rel="noopener"
                   target="_blank"
                   className={Profile.text}
                 >
@@ -119,6 +123,7 @@ export default function developers() {
               <div className={Profile.textfooter}>
                 <a
                   href="https://github.com/KooSinB"
+                  rel="noopener"
                   target="_blank"
                   className={Profile.text}
                 >
@@ -131,5 +136,5 @@ export default function developers() {
         </button>
       </div>
     </Layout>
-  )
+  );
 }

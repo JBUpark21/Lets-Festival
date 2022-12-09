@@ -47,20 +47,22 @@ export default function FormPost(props) {
     if (action == 'add') {
       return (
         <Link href="/Boardindex">
-          className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500
-          hover:shadow-inner hover:bg-red-700 transition-all duration-300"
-          onClick={storeData}
-          올리기
+          <a
+            className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+            onClick={storeData}
+          >
+            올리기
+          </a>
         </Link>
       );
     } else if (action == 'update') {
       return (
-        <Link>
-          className="rounded text-gray-100 px-3 py-1 bg-red-500
-          hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+        <a
+          className="rounded text-gray-100 px-3 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
           onClick={updateData}
+        >
           업데이트
-        </Link>
+        </a>
       );
     }
   };

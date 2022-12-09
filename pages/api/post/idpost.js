@@ -1,11 +1,12 @@
 import Header from '../../../components/CRUD/FormPost';
+import FormPost from '../../../components/CRUD/FormPost';
 
 export default function EditPost(props) {
   return (
     <div>
       <Header title="Create Post"></Header>
       <div className="container mx-auto px-4 max-w-screen-sm">
-        <div action="update" dataPost={props.data}></div>
+        <FormPost action="update" dataPost={props.data}></FormPost>
       </div>
     </div>
   );

@@ -39,20 +39,16 @@ export default function Home() {
             </p>
 
             <div class="mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/signin"
-                class="block w-full rounded bg-orange-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-orange-500 focus:outline-none focus:ring active:bg-orange-500 sm:w-auto"
-              >
-                로그인
+              <Link href="/signin">
+                <a class="block w-full rounded bg-orange-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-orange-500 focus:outline-none focus:ring active:bg-orange-500 sm:w-auto">
+                  로그인
+                </a>
               </Link>
 
-              <Link
-                href="/signup"
-                class="block w-full rounded bg-white px-12 py-3 text-sm
-                font-medium text-orange-400 shadow hover:text-orange-600
-                focus:outline-none focus:ring active:text-orange-500 sm:w-auto"
-              >
-                회원가입
+              <Link href="/signup">
+                <a class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-orange-400 shadow hover:text-orange-600 focus:outline-none focus:ring active:text-orange-500 sm:w-auto">
+                  회원가입
+                </a>
               </Link>
             </div>
           </div>
@@ -71,29 +67,29 @@ export default function Home() {
       <div className={Styles.Youtube_center}>
         <iframe
           src="https://www.youtube.com/embed/qrFnzqUsNXU"
-          frameBorder="0"
-          allowFullScreen
+          frameborder="0"
+          allowfullscreen
           className={Styles.Youtube_box}
         ></iframe>
 
         <iframe
           src="https://www.youtube.com/embed/RKnB-x5iHpM"
-          frameBorder="0"
-          allowFullScreen
+          frameborder="0"
+          allowfullscreen
           className={Styles.Youtube_box}
         ></iframe>
 
         <iframe
           src="https://www.youtube.com/embed/9fpaJvFKVQQ"
-          frameBorder="0"
-          allowFullScreen
+          frameborder="0"
+          allowfullscreen
           className={Styles.Youtube_box}
         ></iframe>
       </div>
 
-      <Link href="#" className={Styles.back_to_top}>
+      <a href="#" className={Styles.back_to_top}>
         <ArrowUpIcon></ArrowUpIcon>
-      </Link>
+      </a>
     </Layout>
   );
 }

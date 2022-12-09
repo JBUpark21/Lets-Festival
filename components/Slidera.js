@@ -1,5 +1,6 @@
 import Styles from '../styles/App.module.css';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 function App() {
   const [index, setIndex] = useState(0);

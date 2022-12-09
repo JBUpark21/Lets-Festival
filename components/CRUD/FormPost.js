@@ -16,7 +16,7 @@ export default function FormPost(props) {
     }));
   };
   const storeData = async (e) => {
-    await fetch('http://localhost:5000/posts/', {
+    await fetch('http://175.194.36.10:5000/posts/', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -30,7 +30,7 @@ export default function FormPost(props) {
   };
 
   const updateData = async (e) => {
-    await fetch('http://localhost:5000/posts/' + props.dataPost.id, {
+    await fetch('http://175.194.36.10:5000/posts/' + props.dataPost.id, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {

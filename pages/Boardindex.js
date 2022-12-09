@@ -6,7 +6,7 @@ export default function Post(props) {
   const [post, setPost] = useState(props.data);
 
   const getAll = async () => {
-    const res = await fetch('http://localhost:5000/posts');
+    const res = await fetch('http://175.194.36.10:5000/posts/');
     const data = await res.json();
 
     setPost(data);
@@ -14,7 +14,7 @@ export default function Post(props) {
 
   const deletePost = async (id) => {
     console.log('tes');
-    await fetch('http://localhost:5000/posts/' + id, {
+    await fetch('http://175.194.36.10:5000/posts/' + id, {
       method: 'DELETE',
     });
     getAll();
@@ -69,7 +69,7 @@ export default function Post(props) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/posts');
+  const res = await fetch('http://175.194.36.10:5000/posts/');
   const data = await res.json();
 
   if (!data) {

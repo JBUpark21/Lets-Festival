@@ -83,7 +83,7 @@ function App() {
 
           return (
             <div className={Styles.imgbox}>
-              <a href={item.url}>
+              <Link href={item.url}>
                 <h3>
                   <img
                     id={item.id}
@@ -92,7 +92,7 @@ function App() {
                     alt="Comic"
                   ></img>
                 </h3>
-              </a>
+              </Link>
             </div>
           );
         })}

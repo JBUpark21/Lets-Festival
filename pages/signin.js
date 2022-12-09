@@ -247,7 +247,7 @@ export default function SigninScreen() {
                 onClick={githubLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a href="https://github.com/JBUpark21">
+                  <Link href="https://github.com/JBUpark21">
                     <svg
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -257,7 +257,7 @@ export default function SigninScreen() {
                     >
                       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
                     </svg>
-                  </a>
+                  </Link>
                 </span>
               </button>
               <button
@@ -269,7 +269,7 @@ export default function SigninScreen() {
                 onClick={googleLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a
+                  <Link
                     className="text-gray-500"
                     href="https://github.com/JBUpark21"
                   >
@@ -298,7 +298,7 @@ export default function SigninScreen() {
                         fill="#EB4335"
                       ></path>
                     </svg>
-                  </a>
+                  </Link>
                 </span>
               </button>
               <button
@@ -310,7 +310,7 @@ export default function SigninScreen() {
                 onClick={naverLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a
+                  <Link
                     className="text-green-500"
                     href="https://github.com/JBUpark21"
                   >
@@ -327,7 +327,7 @@ export default function SigninScreen() {
                       <title>Naver</title>
                       <path d="M1.6 0S0 0 0 1.6v20.8S0 24 1.6 24h20.8s1.6 0 1.6-1.6V1.6S24 0 22.4 0zm3.415 5.6h4.78l4.425 6.458V5.6h4.765v12.8h-4.78L9.78 11.943V18.4H5.015Z" />
                     </svg>
-                  </a>
+                  </Link>
                 </span>
               </button>
               <button
@@ -339,7 +339,7 @@ export default function SigninScreen() {
                 onClick={kakaoLoginHandler}
               >
                 <span className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-start">
-                  <a
+                  <Link
                     className="text-yellow-400"
                     href="https://github.com/JBUpark21"
                   >
@@ -356,7 +356,7 @@ export default function SigninScreen() {
                       <title>KakaoTalk</title>
                       <path d="M22.125 0H1.875C.8394 0 0 .8394 0 1.875v20.25C0 23.1606.8394 24 1.875 24h20.25C23.1606 24 24 23.1606 24 22.125V1.875C24 .8394 23.1606 0 22.125 0zM12 18.75c-.591 0-1.1697-.0413-1.7317-.1209-.5626.3965-3.813 2.6797-4.1198 2.7225 0 0-.1258.0489-.2328-.0141s-.0876-.2282-.0876-.2282c.0322-.2198.8426-3.0183.992-3.5333-2.7452-1.36-4.5701-3.7686-4.5701-6.5135C2.25 6.8168 6.6152 3.375 12 3.375s9.75 3.4418 9.75 7.6875c0 4.2457-4.3652 7.6875-9.75 7.6875zM8.0496 9.8672h-.8777v3.3417c0 .2963-.2523.5372-.5625.5372s-.5625-.2409-.5625-.5372V9.8672h-.8777c-.3044 0-.552-.2471-.552-.5508s.2477-.5508.552-.5508h2.8804c.3044 0 .552.2471.552.5508s-.2477.5508-.552.5508zm10.9879 2.9566a.558.558 0 0 1 .108.4167.5588.5588 0 0 1-.2183.371.5572.5572 0 0 1-.3383.1135.558.558 0 0 1-.4493-.2236l-1.3192-1.7479-.1952.1952v1.2273a.5635.5635 0 0 1-.5627.5628.563.563 0 0 1-.5625-.5625V9.3281c0-.3102.2523-.5625.5625-.5625s.5625.2523.5625.5625v1.209l1.5694-1.5694c.0807-.0807.1916-.1252.312-.1252.1404 0 .2814.0606.3871.1661.0985.0984.1573.2251.1654.3566.0082.1327-.036.2542-.1241.3425l-1.2818 1.2817 1.3845 1.8344zm-8.3502-3.5023c-.095-.2699-.3829-.5475-.7503-.5557-.3663.0083-.6542.2858-.749.5551l-1.3455 3.5415c-.1708.5305-.0217.7272.1333.7988a.8568.8568 0 0 0 .3576.0776c.2346 0 .4139-.0952.4678-.2481l.2787-.7297 1.7152.0001.2785.7292c.0541.1532.2335.2484.4681.2484a.8601.8601 0 0 0 .3576-.0775c.1551-.0713.3041-.2681.1329-.7999l-1.3449-3.5398zm-1.3116 2.4433l.5618-1.5961.5618 1.5961H9.3757zm5.9056 1.3836c0 .2843-.2418.5156-.5391.5156h-1.8047c-.2973 0-.5391-.2314-.5391-.5156V9.3281c0-.3102.2576-.5625.5742-.5625s.5742.2523.5742.5625v3.3047h1.1953c.2974 0 .5392.2314.5392.5156z" />
                     </svg>
-                  </a>
+                  </Link>
                 </span>
               </button>
             </div>
@@ -367,10 +367,11 @@ export default function SigninScreen() {
               </a> */}
               <p class="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
                 아직 회원이 아니신가요? &nbsp;
-                <Link href="/signup">
-                  <a class="text-primary text-blue-300 hover:underline">
-                    회원가입
-                  </a>
+                <Link
+                  href="/signup"
+                  class="text-primary text-blue-300 hover:underline"
+                >
+                  회원가입
                 </Link>
               </p>
             </div>

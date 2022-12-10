@@ -75,7 +75,7 @@ export default function RegisterScreen() {
               </a> */}
 
               <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-                Let&#39;s Festival에 어서오세요!
+                Let's Festival에 어서오세요!
               </h2>
 
               <p class="mt-4 leading-relaxed text-white/90">
@@ -91,6 +91,9 @@ export default function RegisterScreen() {
             class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
           >
             <div class="max-w-xl lg:max-w-3xl">
+              <div class="mx-auto max-w-lg text-center">
+                <h1 class="text-2xl font-bold sm:text-3xl">회원가입</h1>
+              </div>
               <form
                 action=""
                 class="mt-8 grid grid-cols-6 gap-6"
@@ -216,12 +219,12 @@ export default function RegisterScreen() {
                 <div class="col-span-6 flex justify-center">
                   <p class="text-base inline-block mb-2 text-[#adadad] hover:text-primary">
                     이미 계정이 있으신가요? &nbsp;
-                    <Link
+                    <a
                       href={`/signin?redirect=${redirect || '/'}`}
                       class="text-primary text-blue-300 hover:underline"
                     >
                       로그인
-                    </Link>
+                    </a>
                   </p>
                 </div>
               </form>

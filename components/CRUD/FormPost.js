@@ -46,13 +46,12 @@ export default function FormPost(props) {
   const handleButton = (action) => {
     if (action == 'add') {
       return (
-        <Link href="/Boardindex">
-          <a
-            className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
-            onClick={storeData}
-          >
-            올리기
-          </a>
+        <Link
+          href="/Boardindex"
+          className="rounded text-gray-100 mt-96 absolute px-5 py-1 bg-red-500 hover:shadow-inner hover:bg-red-700 transition-all duration-300"
+          onClick={storeData}
+        >
+          올리기
         </Link>
       );
     } else if (action == 'update') {

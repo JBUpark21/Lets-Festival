@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel run:server run:json-server",
+    "dev": "npm run dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "run:server": "next dev -p 3000",
-    "run:json-server": "json-server ./data1.json --port 5000"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",

@@ -40,7 +40,7 @@ export default function FormPost(props) {
       .then((response) => response.json())
       .then((json) => console.log(json));
 
-    router.push('/');
+    router.push('/Boardindex');
   };
 
   const handleButton = (action) => {

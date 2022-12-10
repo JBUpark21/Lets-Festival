@@ -16,7 +16,7 @@ export async function getServerSideProps(context) {
   // const router = useRouter();
   const { idPost } = context.query;
   if (idPost) {
-    const res = await fetch('http://localhost:5000/posts/' + idPost);
+    const res = await fetch('https://json-jbupark21.vercel.app/posts' + idPost);
     const data = await res.json();
 
     if (!data) {

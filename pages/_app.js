@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     <>
       <SessionProvider session={session}>
         <Script
-          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=66a5cde096ffa869666f3a8c941b7e5e&libraries=services,clusterer&autoload=false"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e0555d87025b0bcb71a3a90b7e751d29&libraries=services,clusterer&autoload=false"
           strategy="beforeInteractive"
         />
         <Component {...pageProps} />

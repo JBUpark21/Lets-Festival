@@ -37,7 +37,7 @@ export default function Post(props) {
                 </button>
               </Link>
               <button
-                onClick={() => deletePost(item.id)}
+                onClick={(e) => deletePost(item.id)}
                 className="px-2 py-1 bg-red-800 rounded-sm text-white outline-none focus:ring-4 shadow-lg text-sm mr-1"
               >
                 삭제

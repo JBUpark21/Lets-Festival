@@ -15,7 +15,7 @@ export default function FormPost(props) {
       [e.target.name]: e.target.value,
     }));
   };
-  const storeData = async () => {
+  const storeData = async (e) => {
     await fetch('https://json-jbupark21.vercel.app/posts', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -29,7 +29,7 @@ export default function FormPost(props) {
     router.push('/');
   };
 
-  const updateData = async () => {
+  const updateData = async (e) => {
     await fetch('https://json-jbupark21.vercel.app/posts' + props.dataPost.id, {
       method: 'PUT',
       body: JSON.stringify(data),

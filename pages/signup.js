@@ -75,7 +75,7 @@ export default function RegisterScreen() {
               </a> */}
 
               <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-                Let&apos;s Festival에 어서오세요!
+                Let`&apos;`s Festival에 어서오세요!
               </h2>
 
               <p class="mt-4 leading-relaxed text-white/90">

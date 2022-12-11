@@ -158,7 +158,7 @@ export default function FestivalScreen() {
                 {festival.restaurant}
               </h2>
               <p class="mt-4 text-gray-600">
-                {festival.restaurant} 에 대해서 알려드립니다.
+                {festival.restaurant}에 대해서 알려드립니다.
               </p>
               <Link
                 target="blank"

@@ -98,8 +98,10 @@ export default function FestivalScreen() {
                         <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                           공식 사이트
                         </td>
-                        <td class=" px-4 py-2 text-gray-700">
-                          <a href={festival.site}>{festival.site}</a>
+                        <td class="px-4 py-2 text-gray-700">
+                          <a target="blank" href={festival.site}>
+                            {festival.site}
+                          </a>
                         </td>
                       </tr>
 
